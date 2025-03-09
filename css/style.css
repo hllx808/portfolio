@@ -1,3 +1,6 @@
+/* -----------------------------------------
+   NAVIGATION STYLES
+----------------------------------------- */
 li.nav-item {}
 
 a.nav-link {
@@ -9,11 +12,12 @@ a.nav-link:hover {
 }
 
 .navbar-toggler {
-  z-index: 10;
-  /*keep above bg color*/
+  z-index: 10; /* keep above bg color */
 }
 
-/*main tag*/
+/* -----------------------------------------
+   MAIN CONTAINERS & BOXES
+----------------------------------------- */
 main.cont,
 main.project {
   display: flex;
@@ -28,7 +32,9 @@ main.project {
   margin-top: 25px;
 }
 
-/*style for info*/
+/* -----------------------------------------
+   PROFILE / INFO STYLES
+----------------------------------------- */
 .profile {
   display: flex;
   flex-direction: column;
@@ -50,39 +56,35 @@ main.project {
   font-weight: 300;
 }
 
-/*modify root properties */
-
-/*custom containers*/
+/* Custom container for links */
 .link-container {}
 
-/*ignore for now.. setting a width would fix it, should be done at end though*/
-
-/*general properties*/
+/* -----------------------------------------
+   TYPOGRAPHY & HEADER STYLES
+----------------------------------------- */
 .ul {
   text-decoration: underline;
 }
-
-h2.user-title {
+h2.name-header {
   font-size: 1.2em;
   font-weight: 400;
 }
-
 h2.news-header {
   font-size: 1.2em;
   font-weight: 500;
 }
-
-h3.contact-title {
+h3.contact-header {
   font-size: 1em;
   font-weight: 530;
 }
-
-h5.about-title {
+h5.about-header {
   font-size: 1.03em;
   font-weight: 400;
 }
 
-/*customize the way links look*/
+/* -----------------------------------------
+   LINK & ICON STYLES
+----------------------------------------- */
 .mylinks {
   text-decoration: none;
   color: black;
@@ -93,28 +95,25 @@ h5.about-title {
   font-weight: bold;
 }
 
-/*icon*/
 .icon {
   display: inline;
   vertical-align: middle;
   max-height: 1em;
 }
 
-/*testing*/
-.container {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-}
+/* -----------------------------------------
+   MEDIA QUERIES
+----------------------------------------- */
 
-/*MOBILE VIEW, added stuff*/
+/* MOBILE VIEW */
 @media (max-width: 991.98px) {
   #navbarNav {
-    /*background-color: black; */
+    /* background-color: black; */
     margin-top: clamp(5px, 1vh, 10px);
   }
 }
 
-/*changes for desktop view*/
+/* DESKTOP VIEW */
 @media only screen and (min-width: 769px) {
   main.cont {
     display: grid;
@@ -148,7 +147,7 @@ h5.about-title {
     grid-row: 2 / 6;
   }
 
-  /*add project css page code here*/
+  /* Project Page Specific Styles */
   .teaching,
   .research {
     grid-column: 1/4;
@@ -163,7 +162,7 @@ h5.about-title {
     align-items: start;
   }
 
-  /*all css below is for grid components of project page;*/
+  /* Grid Components of Project Page */
   .header {
     grid-column: 1/6;
     grid-row: 1;
@@ -196,4 +195,3 @@ h5.about-title {
     justify-self: start;
   }
 }
-
