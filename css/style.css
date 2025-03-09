@@ -1,0 +1,257 @@
+li.nav-item {}
+
+a.nav-link {
+  padding-left: 10px;
+}
+
+a.nav-link:hover {
+  background-color: var(--bs-primary-bg-subtle);
+}
+
+.navbar-toggler {
+  z-index: 10;
+  /*keep above bg color*/
+}
+
+/*main tag*/
+main.cont,
+main.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.box {
+  flex: 1 1 auto;
+  margin-top: 25px;
+}
+
+/*style for info*/
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pfp {
+  width: 80%;
+  max-width: 350px;
+  object-fit: cover;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.bio {
+  width: 90%;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/*modify root properties */
+
+/*custom containers*/
+.link-container {}
+
+/*ignore for now.. setting a width would fix it, should be done at end though*/
+
+/*general properties*/
+.ul {
+  text-decoration: underline;
+}
+
+h2.user-title {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+h2.news-header {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+h3.contact-title {
+  font-size: 1em;
+  font-weight: 530;
+}
+
+h5.about-title {
+  font-size: 1.03em;
+  font-weight: 400;
+}
+
+/*customize the way links look*/
+.mylinks {
+  text-decoration: none;
+  color: black;
+}
+
+.mylinks:hover {
+  margin-left: 2px;
+  font-weight: bold;
+}
+
+/*icon*/
+.icon {
+  display: inline;
+  vertical-align: middle;
+  max-height: 1em;
+}
+
+/*testing*/
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 3fr auto;
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 1em;
+  row-gap: 3px;
+  width: fit-content;
+}
+
+.news-elm1 {
+  grid-column: 1 / span 3;
+}
+
+.news-elm2 {
+  grid-column-start: 4;
+}
+
+.news-elm3 {
+  grid-column: 1 / span 3;
+  grid-row-start: 2;
+}
+
+.news-elm4 {
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+
+.news-elm5 {
+  grid-column: 1 / span 3;
+  grid-row-start: 3;
+}
+
+.news-elm6 {
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+
+.news-elm7 {
+  grid-column: 1 / span 3;
+  grid-row-start: 4;
+}
+
+.news-elm8 {
+  grid-column-start: 4;
+  grid-row-start: 4;
+}
+
+.news-elm9 {
+  grid-column: 1 / span 3;
+  grid-row-start: 5;
+}
+
+.news-elm10 {
+  grid-column-start: 4;
+  grid-row-start: 5;
+}
+
+/*MOBILE VIEW, added stuff*/
+@media (max-width: 991.98px) {
+  #navbarNav {
+    /*background-color: black; */
+    margin-top: clamp(5px, 1vh, 10px);
+  }
+}
+
+/*changes for desktop view*/
+@media only screen and (min-width: 769px) {
+  main.cont {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    align-items: start;
+  }
+
+  .profile {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+
+  .bio {
+    justify-self: center;
+    width: 95%;
+    grid-column: 2/4;
+    grid-row: 1;
+    margin-top: 3rem;
+  }
+
+  .news {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .projects-box {
+    margin-top: 1rem;
+    grid-column: 2/4;
+    grid-row: 2 / 6;
+  }
+
+  /*add project css page code here*/
+  .teaching,
+  .research {
+    grid-column: 1/4;
+    grid-row: 1 / 6;
+  }
+
+  main.project {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+    align-items: start;
+  }
+
+  /*all css below is for grid components of project page;*/
+  .header {
+    grid-column: 1/6;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+    margin-top: 20px;
+  }
+
+  .intro {
+    grid-column: 1/3;
+    grid-row: 2/4;
+    justify-self: center;
+    width: 90%;
+  }
+
+  .paper {
+    grid-column: 3/6;
+    grid-row: 2 / 6;
+  }
+
+  .intro img,
+  .intro video {
+    width: 90%;
+    max-width: 600px;
+    object-fit: cover;
+  }
+
+  .paper img {
+    align-self: stretch;
+    justify-self: start;
+  }
+}
+
