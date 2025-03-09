@@ -106,64 +106,6 @@ h5.about-title {
   grid-template-columns: 3fr 1fr;
 }
 
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-columns: 3fr auto;
-  grid-template-rows: repeat(5, 1fr);
-  column-gap: 1em;
-  row-gap: 3px;
-  width: fit-content;
-}
-
-.news-elm1 {
-  grid-column: 1 / span 3;
-}
-
-.news-elm2 {
-  grid-column-start: 4;
-}
-
-.news-elm3 {
-  grid-column: 1 / span 3;
-  grid-row-start: 2;
-}
-
-.news-elm4 {
-  grid-column-start: 4;
-  grid-row-start: 2;
-}
-
-.news-elm5 {
-  grid-column: 1 / span 3;
-  grid-row-start: 3;
-}
-
-.news-elm6 {
-  grid-column-start: 4;
-  grid-row-start: 3;
-}
-
-.news-elm7 {
-  grid-column: 1 / span 3;
-  grid-row-start: 4;
-}
-
-.news-elm8 {
-  grid-column-start: 4;
-  grid-row-start: 4;
-}
-
-.news-elm9 {
-  grid-column: 1 / span 3;
-  grid-row-start: 5;
-}
-
-.news-elm10 {
-  grid-column-start: 4;
-  grid-row-start: 5;
-}
-
 /*MOBILE VIEW, added stuff*/
 @media (max-width: 991.98px) {
   #navbarNav {
