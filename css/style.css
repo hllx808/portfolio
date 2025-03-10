@@ -175,7 +175,6 @@ a.nav-link:hover {
 ----------------------------------------- */
 section.header {
   text-align: center;
-
 }
 
 section.project-preview {
@@ -252,12 +251,6 @@ section.features {
   }
 
   /* Project Page Specific Styles */
-  .teaching,
-  .research {
-    grid-column: 1/4;
-    grid-row: 1 / 6;
-  }
-
   /*grid setup for project pages*/
   main.project {
     display: grid;
@@ -335,30 +328,5 @@ section.features {
     grid-row: 8/9;
     grid-column: 1 / -1;
     grid-area: git;
-  }
-
-
-  .intro {
-    grid-column: 1/3;
-    grid-row: 2/4;
-    justify-self: center;
-    width: 90%;
-  }
-
-  .paper {
-    grid-column: 3/6;
-    grid-row: 2 / 6;
-  }
-
-  .intro img,
-  .intro video {
-    width: 90%;
-    max-width: 600px;
-    object-fit: cover;
-  }
-
-  .paper img {
-    align-self: stretch;
-    justify-self: start;
   }
 }
