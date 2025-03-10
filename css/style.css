@@ -1,30 +1,38 @@
-/* -----------------------------------------
-   NAVIGATION STYLES
------------------------------------------ */
-li.nav-item {}
-
-a.nav-link {
-  padding-left: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a.nav-link:hover {
-  background-color: var(--bs-primary-bg-subtle);
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 0 clamp(3px, 3vw, 25px);
+
 }
 
-.navbar-toggler {
-  z-index: 10; /* keep above bg color */
-}
 
 /* -----------------------------------------
    MAIN CONTAINERS & BOXES
 ----------------------------------------- */
+
 main.cont,
 main.project {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0 20px;
+  /*default: order sections in 1 column w/some space in between them*/
+  display: flex;                  /*grid*/
+  flex-direction: column;         /*N/A*/
+  justify-content: flex-start;    /*N/A*/
+  align-items: center;            /*N/A*/
+
+  background-color: #fff;
+  padding: 2dvw;
+  border-radius: 3dvw;
+  /* display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    align-items: start; */
 }
 
 .box {
@@ -33,31 +41,62 @@ main.project {
 }
 
 /* -----------------------------------------
-   PROFILE / INFO STYLES
+   MAIN SECTIONS
 ----------------------------------------- */
 .profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  display: flex;                
+  flex-direction: column;       
+  justify-content: flex-start;  
+  align-items: center;          
+/* note: all elmements above remain in desktop view!
+  grid-column: 1;
+  grid-row: 1/3; */
 }
 
-.pfp {
+.bio {
   width: 80%;
+  font-style: italic;
+  font-weight: 365;
+  /*
+  justify-self: center;
+  width: 95%;
+  grid-column: 2/4;
+  grid-row: 1;
+  margin-top: 3rem; 
+  */
+}
+
+
+/*intentionally blank...
+.news{}
+.projects{}
+
+Desktop view 
+.news {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.projects {
+  margin-top: 1rem;
+  grid-column: 2/4;
+  grid-row: 2 / 6;
+}
+*/
+
+
+
+/* -----------------------------------------
+   Sub Containers (irreleveant to dynamic view)
+----------------------------------------- */
+img.pfp {
+  width: 75%;
   max-width: 350px;
   object-fit: cover;
   border-radius: 25px;
   margin-bottom: 10px;
 }
 
-.bio {
-  width: 90%;
-  font-style: italic;
-  font-weight: 300;
-}
-
-/* Custom container for links */
-.link-container {}
 
 /* -----------------------------------------
    TYPOGRAPHY & HEADER STYLES
@@ -65,7 +104,10 @@ main.project {
 .ul {
   text-decoration: underline;
 }
-h2.name-header {
+h1.name-header {
+  font-size: 1.65em;
+}
+h2.title-header {
   font-size: 1.2em;
   font-weight: 400;
 }
@@ -81,10 +123,24 @@ h5.about-header {
   font-size: 1.03em;
   font-weight: 400;
 }
+/*project page css headers*/
+section.header h1 {
+  /* font-size: clamp(1em, 1.5wh, 100px); */
+  font-size: 1.5rem;
+}
+section.header p {
+  font-size: 1rem;
+  font-style: italic;
+  color: #4e4e4e;
+}
+section.box h2 {
+  font-size: 1.3em;
+}
 
 /* -----------------------------------------
    LINK & ICON STYLES
 ----------------------------------------- */
+
 .mylinks {
   text-decoration: none;
   color: black;
@@ -95,11 +151,59 @@ h5.about-header {
   font-weight: bold;
 }
 
-.icon {
-  display: inline;
-  vertical-align: middle;
-  max-height: 1em;
+
+/* -----------------------------------------
+   NAV PAGE STYLES (for nav component)
+----------------------------------------- */
+
+li.nav-item {}
+
+a.nav-link {
+  padding-left: 10px;
 }
+
+a.nav-link:hover {
+  background-color: var(--bs-primary-bg-subtle);
+}
+
+.navbar-toggler {
+  z-index: 10; /* keep above bg color */
+}
+
+/* -----------------------------------------
+   Project Page Specific CSS
+----------------------------------------- */
+section.header {
+  text-align: center;
+
+}
+
+section.project-preview {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+.project-preview img {
+  width: 95%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+section.project-description {
+  max-width: 90%;
+}
+
+section.technologies {
+  min-width: 90%;
+}
+
+section.features {
+  min-width: 90%;
+}
+
+/*development-process and future-improvements -> no set css*/
+
 
 /* -----------------------------------------
    MEDIA QUERIES
@@ -133,7 +237,7 @@ h5.about-header {
     width: 95%;
     grid-column: 2/4;
     grid-row: 1;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
   }
 
   .news {
@@ -141,7 +245,7 @@ h5.about-header {
     grid-row: 3;
   }
 
-  .projects-box {
+  .projects {
     margin-top: 1rem;
     grid-column: 2/4;
     grid-row: 2 / 6;
@@ -154,22 +258,85 @@ h5.about-header {
     grid-row: 1 / 6;
   }
 
+  /*grid setup for project pages*/
   main.project {
     display: grid;
     gap: 15px;
+
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(8, auto);
     align-items: start;
+    grid-template-areas:
+    "proj   proj  proj  proj  proj  proj"
+    "image  image image desc  desc  desc"
+    "image  image image desc  desc  desc"
+    "tech   tech  tech  desc  desc  desc"
+    "feat   feat  feat  desc  desc  desc"
+    "dev    dev   dev   dev   dev   dev"
+    "fut    fut   fut   fut   fut   fut"
+    "git    git   git   git   git   git";
   }
 
   /* Grid Components of Project Page */
-  .header {
-    grid-column: 1/6;
+  section.header {
     grid-row: 1;
+    grid-column: 1/-1;
+    grid-area: proj;
     align-self: center;
     justify-self: center;
     margin-top: 20px;
   }
+
+  section.project-preview {
+    grid-row: 2/4;
+    grid-column: 1/3;
+    grid-area: image;
+    justify-self: center;
+  }
+  /*.project-preview img {...} -> empty..*/
+  
+
+  section.project-description {
+    grid-row: 2/4;
+    grid-column: 3/-1;
+    grid-area: desc;
+    display: flex;
+  }
+  /*might remove plain para for some bootstrap*/
+  .project-description p {
+    color: #0a3f50;
+  }
+
+  section.technologies {
+    grid-row: 4/5;
+    grid-column: 1/3;
+    grid-area: tech;
+  }
+
+  section.features {
+    grid-row: 5/6;
+    grid-column: 1;
+    grid-area: feat;
+  }
+
+  section.development-process {
+    grid-row: 6/7;
+    grid-column: 1 / -1;
+    grid-area: dev;
+  }
+
+  section.future-improvements {
+    grid-row: 7/8;
+    grid-column: 1 / -1;
+    grid-area: fut;
+  }
+
+  section.repository {
+    grid-row: 8/9;
+    grid-column: 1 / -1;
+    grid-area: git;
+  }
+
 
   .intro {
     grid-column: 1/3;
