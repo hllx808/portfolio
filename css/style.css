@@ -12,6 +12,22 @@ body {
 
 }
 
+/* -----------------------------------------
+   BASE LINK & ICON STYLES
+----------------------------------------- */
+
+.mylinks {
+  text-decoration: none;
+  color: black;
+}
+
+.mylinks:hover {
+  font-weight: 600;
+}
+.shift-link:hover {
+  margin-left: 2px;
+}
+
 
 /* -----------------------------------------
    MAIN CONTAINERS & BOXES
@@ -41,7 +57,7 @@ main.project {
 }
 
 /* -----------------------------------------
-   MAIN SECTIONS
+   MAIN PAGE SECTIONS
 ----------------------------------------- */
 section.profile {
   display: flex;                
@@ -68,8 +84,12 @@ section.bio {
 
 /*intentionally blank...
 section.news{}
-section.projects{}
-Desktop view 
+section.projects{}*/
+section.projects  h3 {
+  padding: .2rem 0.6rem;
+}
+
+/*Desktop view 
 .news {
   grid-column: 1;
   grid-row: 3;
@@ -102,8 +122,10 @@ img.pfp {
 }
 h1.name-header {
   font-size: 1.65em;
+  margin-bottom: 0;
 }
 h2.title-header {
+  text-align: center;
   font-size: 1.2em;
   font-weight: 400;
 }
@@ -119,6 +141,9 @@ h5.about-header {
   font-size: 1.03em;
   font-weight: 400;
 }
+section.projects h3 {
+  font-size: 1.3em;
+}
 /*project page css headers*/
 section.header h1 {
   /* font-size: clamp(1em, 1.5wh, 100px); */
@@ -132,21 +157,6 @@ section.header p {
 section.box h2 {
   font-size: 1.3em;
 }
-
-/* -----------------------------------------
-   LINK & ICON STYLES
------------------------------------------ */
-
-.mylinks {
-  text-decoration: none;
-  color: black;
-}
-
-.mylinks:hover {
-  margin-left: 2px;
-  font-weight: bold;
-}
-
 
 /* -----------------------------------------
    NAV PAGE STYLES (for nav component)
