@@ -188,7 +188,9 @@ section.project-preview {
   justify-content: center;
   width: 90%;
 }
-.project-preview img {
+
+/*had to change from img to .figure bootstrap*/
+.project-preview figure {
   width: 95%;
   height: auto;
   object-fit: contain;
