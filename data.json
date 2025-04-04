@@ -2,12 +2,56 @@
     "about": {
         "name": "David Ruiz",
         "title": "Undergraduate Tutor/Math Researcher",
+        "bio": {
+            "text": "Hey! I'm an Undergraduate Student at Boston College in my Junior year. I'm currently working on a Bachelor's Degree of Science for CS and a Minor in Mathematics. I'm extremely passionate about the ways in which technology can be used to encourage learning and better our world. I run a version of Linux using AwesomeWM as my window manager with a very customized configuration that I like to tweak every few weeks. I'm involved in an expiremental math lab at Boston College where we're trying to use Machine Learning to categorize certain Coxeter groups based on their properties. I'm also a content tutor at our schools athlete center where I tutor introductory CS and Math courses.",
+            "update-date": "Updated on: 03-06-2025"
+        },
         "photo": "./media/pfp.png",
         "email-url": "ruizdeca@bc.edu",
         "git1-url": "https://github.com/hllx808",
         "git2-url": "https://github.com/beered239",
         "linkedin-url": "https://www.linkedin.com/in/david-ruiz-de-castilla-19689b217/"
     },
-    "news": {},
-    "projects": {}
+    "news": [
+        {
+            "title": "CS & Math Content Tutor",
+            "date": "February 2025"
+        },
+        {
+            "title": "Summer Math Research Assistant",
+            "date": "May 2024"
+        },
+        {
+            "title": "Apple Playlist Exporter",
+            "date": "March 2024"
+        },
+        {
+            "title": "Bandcamp Webscraper & Downloader",
+            "date": "March 2022"
+        }
+    ],
+    "project-summary": [
+        {
+            "id": "schottky",
+            "title": "Schottky Circle Visualization Algorithm",
+            "function-text": "Python and Java code that generates a visual representation's of Schottky Groups which was the focus of a Math Research Project at Boston College over the Summer of 2023.",
+            "purpose-text": "The code and implementation of the IIS algorithm was primarily developed by me in both python and java with the intention of making a readable representation of how the algorithm would work in practice. The algorithm itself uses an inversion map with relation to a circle to create a visual representation of a schottky group using. This idea was introduced and explored by undergraduate students from Meiji University so a lot of credit goes to their team for creating an efficient method of generating the figures without using a composition of mobius maps, a method that is computationally less efficient.",
+            
+            "optional-link": {
+                "src": "https://github.com/hllx808/Schottky-Circles-IIS-algorithm/"
+            },
+
+            "description": "",
+            "image-caption": "",
+            "media": [
+                {
+                    "label": "",
+                    "path": "./media/"
+                }
+            ],
+            "metadata": {
+                "update-date": ""
+            }
+        }
+    ]
 }
