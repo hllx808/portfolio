@@ -92,7 +92,7 @@
             "features" : [
                 "Limited url parsing, only apple music playlists so far",
                 "Some webpage caching is used/possible",
-                "Saving JSON of prevously saved pages to keep a \"history\" of sorts",
+                "Saving JSON of prevously saved pages to keep a \"history\" of sorts"
             ],
             "development-process": "The first part of the project involved figuring out the feasibility of getting a fully loaded page. I explored potential existing options for libraries that could save and parse dynamic web pages. Initially I wanted to create fake requests and just get raw data that way because I didn't like the idea of relying on a library that basically requires the computational power to run an actual browser, which seemed sort of expensive for the task. I still think the web requests is a viable route if more research is done on which parts of the page ask for what content, and if there's a specific way to get just the playlist content info the preformance gain would be significant. I ultimately decided to use selenimum and BS4 and played around with their configuration and what specific classes or tag attributes to seek out once a page was downloaded to only keep the parts of the page that had the playlist data. The custom JSON class library was later implemented along with a method of caching pages so that selenium wouldn't be ran everytime during testing.",
             "future-improvements": "As I mentioned, I think narrowing the focus on requests would be a very different but possible solution. I also need to clean up the codebase because as of right now it is pretty messsy and unpresentable.",
