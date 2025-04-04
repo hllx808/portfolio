@@ -9,6 +9,7 @@ fetch('data.json')
         const projectId = urlParams.get("project");
         const page = projectId == null ? "main" : "project-page";
 
+        renderNavBar(data)
         if (page === "main") {
             renderMainPage(data);
         } else {
@@ -18,7 +19,51 @@ fetch('data.json')
         }
     })
 
-//already have navbar..
+//navbar for all pages 
+function renderNavBar(data) {
+    const projects = data["project-summary"];
+
+    const projectLinks = projects.map(project => {
+        return `
+        <li class="nav-item">
+          <a class="nav-link" href="?project=${project.id}">
+            ${project.bar_name}
+          </a>
+        </li>`;
+    }).join("");
+
+    const navHTML = `
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=".">My Portfolio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href=".">Home</a>
+              </li>
+              ${projectLinks}
+            </ul>
+          </div>
+        </div>
+      </nav>`;
+
+    const body = document.querySelector("body");
+    body.innerHTML = navHTML + body.innerHTML
+}
+
+
+//project page specific gen
 
 function renderProfileSection(data) {
     return `
@@ -117,7 +162,7 @@ function renderProjectsSection(data) {
                 </ul>
               </div>`;
     }).join("");
-    
+
     return `
       <section class="box projects">
         <h2>Projects</h2>

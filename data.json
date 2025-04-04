@@ -51,6 +51,7 @@
         },
         {
             "id": "bandcamp",
+            "bar_name": "Bandcamp DL",
             "title": "Bandcamp Downloader",
             "function-text": "Java code using core libraries that downloaded the mp3 tracks of an album on bandcamp after taking a valid url as input.",
             "purpose-text": "An older project using Java with no web parsing libraries that examined aspects of data sent via url's, specifically bandcamp url's in order to better understand one of the ways webpages receive and send data to servers using a Get method which is easier to find the specifics of in a static html page like the one's Bandcamp used. Some challenges included created a very rudementary abstract syntax tree that mostly detected groupings based on brackets in html and json files downloaded from a bandcamp url. Then this was parsed to get working links for each track on an album page."
